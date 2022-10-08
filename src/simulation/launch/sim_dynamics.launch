@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+	
+    <include file="$(find simulation)/launch/cessna.launch" />
+
+	<node name="state_publisher" pkg="simulation" type="state_publisher"/>
+
+</launch>

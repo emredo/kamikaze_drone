@@ -1,0 +1,15 @@
+float64 agent_x
+float64 agent_y
+float64 agent_z
+float64 enemy_x
+float64 enemy_y
+float64 enemy_z
+float64 agent_vx
+float64 agent_vy
+float64 agent_vz
+float64 agent_w
+float64 enemy_vx
+float64 enemy_vy
+float64 enemy_vz
+float64 reward
+int64 done_indice

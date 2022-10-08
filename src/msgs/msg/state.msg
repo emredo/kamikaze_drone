@@ -1,0 +1,13 @@
+float64 ball1_x
+float64 ball1_y
+float64 ball1_z
+float64 ball2_x
+float64 ball2_y
+float64 ball2_z
+float64 ball1_vx
+float64 ball1_vy
+float64 ball1_vz
+float64 ball1_w
+float64 ball2_vx
+float64 ball2_vy
+float64 ball2_vz

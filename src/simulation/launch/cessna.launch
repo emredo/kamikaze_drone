@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<launch>
+<!-- Load the urdf into the parameter server. -->
+	<arg name="model" default="$(find simulation)/urdf/cessna.urdf.xacro"/>
+	<arg name="x"           default="0.0"/>
+	<arg name="y"           default="0.0"/>
+	<arg name="z"           default="0.0"/>
+
+	<param name="robot_description" command="$(find xacro)/xacro $(find simulation)/urdf/cessna.urdf.xacro"/>
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<!-- <arg name="world_name" value="$(find simulation)/worlds/empty.world"/> -->
+	</include>
+
+	<node name="spawn_agent" pkg="gazebo_ros" type="spawn_model"
+      args="-urdf -param robot_description -model agent
+        -gazebo_namespace /gazebo
+        -x $(arg x) -y $(arg y) -z $(arg z)"/>
+	
+	<node name="spawn_enemy" pkg="gazebo_ros" type="spawn_model"
+      args="-urdf -param robot_description -model enemy
+        -gazebo_namespace /gazebo
+        -x 1 -y 1 -z 0"/>
+
+</launch>

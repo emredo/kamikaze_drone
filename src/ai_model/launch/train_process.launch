@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+    
+    <include file="$(find box_pkg)/launch/cessna.launch" />
+
+    <include file="$(find simulation)/launch/sim_dynamics.launch" />
+
+	<!-- <node name="mainrunner" pkg="ai_model" type="main.py" /> -->
+
+</launch>

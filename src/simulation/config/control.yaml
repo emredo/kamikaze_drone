@@ -1,0 +1,9 @@
+agent:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  top_controller:
+    joint: base_joint
+    type: effort_controllers/JointVelocityController
+    pid: { p: 7.0, i: 0.0, d: 0.0, i_clamp: 10.0 }

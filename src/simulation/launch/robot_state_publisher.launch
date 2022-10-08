@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+	<rosparam file="$(find simulation)/config/control.yaml" command="load"/>
+	<param name="robot_description" command="$(find xacro)/xacro $(find simulation)/urdf/cessna.urdf.xacro"/>
+
+	<node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find simulation)/rviz/rviz.rviz"/>
+
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+		output="screen" ns="/agent" args="joint_state_controller"/>
+	
+	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
+
+</launch>

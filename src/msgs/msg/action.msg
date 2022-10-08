@@ -1,0 +1,4 @@
+float64 ball1_vx
+float64 ball1_vy
+float64 ball1_vz
+float64 ball1_angular
