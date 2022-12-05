@@ -78,7 +78,7 @@ pytorch
 Make necessary changes in main.py (train, test, visualize etc.). After that, run following command:
 
 ```
-git clone """link"""
+git clone https://github.com/emredo/kamikaze_drone
 cd ./kamikaze_drone
 catkin build  ## whether catkin_make or catkin build is possible. It depends on your ros usages.
 source ./build/devel/setup.bash
